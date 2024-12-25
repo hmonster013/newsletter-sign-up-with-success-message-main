@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <script src="script.js" defer></script>
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+  <!-- Sign-up form start -->
+  <div class="card">
+    <div class="card__content">
+      <h1>Stay updated!</h1>
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul>
+        <li>Product discovery and building what matters</li>
+        <li>Measuring to ensure updates are a success</li>
+        <li>And much more!</li>
+      </ul>
+      <form>
+        <label for="email">Email address<span id="spanValidEmail">Valid email required</span></label>
+        <input type="email" id="email" name="email" placeholder="email@company.com">
+        <button type="button" id="button">Subscribe to monthly newsletter</button>
+      </form>
+    </div>
+    <div class="card__image">
+      <img src="./assets/images/illustration-sign-up-desktop.svg" alt="Illustration of a person signing up">
+    </div>
+  </div>
+  <!-- Sign-up form end -->
+
+  <!-- Success message start -->
+  <div class="popup__success">
+    <img src="./assets/images/icon-success.svg" alt="Checkmark icon">
+    <h1>Thanks for subscribing!</h1>
+    <p>A confirmation email has been sent to <span id="emailSpan"></span>. 
+      Please open it and click the button inside to confirm your subscription.</p>
+    <button type="button" id="dismissButton">Dismiss message</button>
+  </div>
+  <!-- Success message end -->
+</body>
+</html>

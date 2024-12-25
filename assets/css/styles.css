@@ -1,0 +1,271 @@
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: var(--Charcoal-Grey);
+  background-color: var(--Dark-Slate-Grey);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1440px;
+  height: 100vh;
+  position: relative;
+}
+
+/* Card */
+.card {
+  width: 900px;
+  height: 636px;
+  border-radius: 16px;
+  box-sizing: border-box;
+  background-color: var(--White);
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+  gap: 32px;
+  padding: 0px 32px;
+}
+
+/* Card content */
+.card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  grid-area: 1 / 1;
+  margin: 67px 0px;
+  padding: 0px 16px 32px 16px;
+}
+
+.card__content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  color: var(--Dark-Slate-Grey);
+}
+
+.card__content p {
+  color: var(--Grey);
+  line-height: 24px;
+  margin-top: 0px;
+}
+
+.card__content ul {
+}
+
+.card__content li {
+  line-height: 24px;
+  color: var(--Grey);
+  list-style-image: url("../images/icon-list.svg");
+  padding-left: 4px;
+  margin-bottom: 16px;
+}
+
+.card__content form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card__content form label {
+  position: relative;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--Dark-Slate-Grey);
+  margin-bottom: 8px;
+}
+
+.card__content form span#spanValidEmail {
+  visibility: hidden;
+  color: var(--Tomato);
+  position: absolute;
+  right: 0px;
+}
+
+.card__content form input {
+  width: 386px;
+  height: 50px;
+  border: 1px solid var(--Grey);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  padding-left: 16px;
+  font-size: 12px 16px;
+}
+
+.card__content form button {
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  background-color: var(--Dark-Slate-Grey);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--White);
+  padding: 12px 0px;
+}
+
+.card__content form button:hover {
+  background-color: var(--Tomato);
+}
+
+/* Card image */
+.card__image {
+  grid-area: 1 / 2;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  box-sizing: border-box;
+}
+
+.card__image img {
+  width: 386px;
+  height: 572px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* Popup */
+.popup__success {
+  visibility: hidden;
+  width: 500px;
+  height: 468px;
+  background-color: var(--White);
+  position: absolute;
+  border-radius: 16px;
+  padding: 32px 48px;
+  box-sizing: border-box;
+}
+
+.popup__success img {
+  width: 60px;
+  height: 60px;
+  height: auto;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.popup__success h1 {
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+  color: var(--Dark-Slate-Grey);
+  margin: 0px;
+  margin-bottom: 32px;
+}
+
+.popup__success p {
+  font-size: 16px;
+  color: var(--Grey);
+  margin-bottom: 32px;
+}
+
+.popup__success span#emailSpan {
+  font-weight: 700;
+}
+
+.popup__success button {
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--White);
+  background-color: var(--Dark-Slate-Grey);
+  border-radius: 8px;
+}
+
+.popup__success button:hover {
+  background-color: var(--Tomato);
+}
+
+@media (max-width: 900px) {
+  * {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--White);
+  }
+
+  .card {
+    width: 100%;
+    height: 100vh;
+    grid-template: auto auto / 1fr;
+    border-radius: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    gap: 0;
+  }
+
+  .card__content {
+    grid-area: 2 / 1;
+    margin: 0px;
+    padding-bottom: 0px;
+  }
+
+  .card__image {
+    width: 100%;
+    grid-area: 1 / 1;
+    margin: 0px;
+  }
+
+  .card__content h1 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  .card__content p {
+    font-size: 14px;
+    margin: 16px 0px;
+  }
+
+  .card__content ul {
+    font-size: 14px;
+    margin-left: 30px;
+  }
+
+  .card__content li {
+  }
+
+  .card__image img {
+    width: 100%;
+    height: 50vh;
+    src: url("../images/image-intro-mobile.jpg");
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+  .card__content from {
+    padding: 0px;
+  }
+
+  .card__content form input {
+    width: 100%;
+  }
+
+  .card__content form button {
+    width: 100%;
+  }
+
+  .popup__success {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+  }
+}
